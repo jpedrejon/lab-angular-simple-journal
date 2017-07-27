@@ -1,0 +1,10 @@
+<h3> Entries list </h3>
+<div>
+  <div *ngFor="let entry of entries | async" class="blocky">
+    <!-- <img height=150 [src]="entry.image" /> -->
+    <p> <b>Title</b>:{{ entry.title }} </p>
+    <p> <b>Date</b>:{{ entry.date }} </p>
+
+    <a [routerLink]="['entry', entry._id]"> View Entry</a>
+  </div>
+</div>
